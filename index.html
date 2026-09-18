@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kyttos — Before it goes in the basket</title>
+  <meta name="description" content="Kyttos reads a product’s ingredient list for your household — not for a generic healthy person. One sentence in the aisle.">
+  <meta name="theme-color" content="#F8F9F5">
+  <link rel="icon" type="image/png" href="./assets/favicon.png">
+  <link rel="apple-touch-icon" href="./assets/app-icon.png">
+  <meta property="og:title" content="Kyttos — Before it goes in the basket">
+  <meta property="og:description" content="The pack is written for everyone. Kyttos reads it for the person you’re buying for.">
+  <meta property="og:image" content="./assets/og-cover.png">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Kyttos",
+    "applicationCategory": "HealthApplication",
+    "operatingSystem": "iOS",
+    "description": "A personal ingredient reader. Scan a label and get one sentence based on who you are actually buying for."
+  }
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+    <a class="brand" href="#top">
+      <img src="./assets/app-icon.png" alt="" width="36" height="36">
+      <span>Kyttos</span>
+    </a>
+    <nav class="nav" aria-label="Page">
+      <a href="#pack">The pack</a>
+      <a href="#moment">The aisle</a>
+      <a href="#built">How it’s built</a>
+    </nav>
+    <a class="header-cta" href="#download">Get the app</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <p class="masthead">
+        <span>Kyttos</span>
+        <span>A shopping companion</span>
+        <span>iPhone</span>
+      </p>
+
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">You already know how to shop. The pack is the hard part.</p>
+          <h1>Before it goes in the basket.</h1>
+          <p class="lead">
+            Point Kyttos at the ingredient list. In a few seconds it tells you —
+            in one sentence — whether this product works for you, your child,
+            or whoever you’re standing there buying for.
+          </p>
+          <p class="lead-sub">
+            Not a health score. Not a lecture. The thing you needed under the fluorescent lights.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-solid" href="#download">
+              <img src="./assets/ic_apple.svg" alt="" width="16" height="16">
+              App Store
+            </a>
+            <p class="fine">Available on iPhone.</p>
+          </div>
+        </div>
+
+        <figure class="device-wrap" aria-label="Kyttos reading a yoghurt label">
+          <div class="device" data-mood="neutral" id="hero-device">
+            <div class="device-bezel">
+              <div class="island" aria-hidden="true"></div>
+              <div class="camera-view">
+                <img src="./assets/label-yogurt.png" alt="Back of a yoghurt pot, showing the ingredient list.">
+                <div class="camera-dim"></div>
+                <p class="camera-hint">Point at the list</p>
+              </div>
+              <div class="sheet" id="hero-sheet">
+                <div class="sheet-handle" aria-hidden="true"></div>
+                <div class="sheet-top">
+                  <p class="profile-chip" id="hero-chip">Reading…</p>
+                  <span class="status-dot" id="hero-dot" aria-hidden="true"></span>
+                </div>
+                <h2 class="verdict" id="hero-verdict" aria-live="polite">Reading the label…</h2>
+                <p class="reason" id="hero-reason"></p>
+                <div class="chips" id="hero-chips" aria-live="polite"></div>
+                <button class="sheet-more" type="button" id="sheet-toggle">Tap to see all 4 ingredients</button>
+                <ul class="ing-list" id="ing-list" hidden>
+                  <li data-flag="milk"><span class="dot solid"></span><div><strong>Pasteurised milk</strong><em>Direct dairy</em></div></li>
+                  <li data-flag="milk histo"><span class="dot solid"></span><div><strong>Yoghurt culture</strong><em>From milk · fermented</em></div></li>
+                  <li data-flag="histo"><span class="dot hollow"></span><div><strong>Lactic cultures</strong><em>Worth knowing</em></div></li>
+                  <li><span class="dot mute"></span><div><strong>Pectin</strong><em>Quiet</em></div></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <figcaption>A real pack. A human sentence. No traffic-light score.</figcaption>
+        </figure>
+      </div>
+
+      <div class="demo-intro" id="pack">
+        <p class="kicker">Try it like a household</p>
+        <h2>Same yoghurt. Three people at home.</h2>
+        <p>The pack does not change. The sentence should. Tap who you’re shopping for — the way you would in the aisle, with one thumb.</p>
+      </div>
+
+      <div class="people" role="tablist" aria-label="Household profiles">
+        <button class="person is-active" role="tab" aria-selected="true" id="tab-leo" data-profile="leo">
+          <span class="person-name">Leo</span>
+          <span class="person-meta">6 years old · dairy, strict</span>
+          <span class="person-line">You do the shop. He doesn’t get a second chance at the label.</span>
+        </button>
+        <button class="person" role="tab" aria-selected="false" id="tab-maja" data-profile="maja">
+          <span class="person-name">Maja</span>
+          <span class="person-meta">Histamine · moderate</span>
+          <span class="person-line">Fermented things can wreck a week. The allergen box is silent.</span>
+        </button>
+        <button class="person" role="tab" aria-selected="false" id="tab-erik" data-profile="erik">
+          <span class="person-name">Erik</span>
+          <span class="person-meta">Tree nuts only</span>
+          <span class="person-line">This pot is fine for him. That is also useful information.</span>
+        </button>
+      </div>
+      <p class="demo-status" id="demo-status">You’re shopping for Leo. Dairy is a hard stop.</p>
+    </section>
+
+    <section class="band band-aisle" id="moment">
+      <img class="band-photo" src="./assets/aisle-dairy.png" alt="A quiet supermarket dairy aisle.">
+      <div class="caption-card">
+        <p class="kicker">The moment</p>
+        <h2>Fluorescent lights. Tiny print. Someone at home who can’t have milk.</h2>
+        <p>You turn the pot around. The type is smaller than your patience. Google will give you fourteen tabs and still not know that you’re shopping for Leo.</p>
+      </div>
+    </section>
+
+    <section class="split" id="why">
+      <div class="split-photo">
+        <img src="./assets/hand-label.png" alt="A shopper holding a packet in a supermarket aisle, reading the back of the pack.">
+      </div>
+      <div class="split-copy">
+        <p class="kicker">Why this exists</p>
+        <h2>Generic apps rate the product. You don’t buy products for a generic person.</h2>
+        <p>Database apps look up a barcode and paint it green or red for “people.” Kyttos reads the list in your hand, against the household you actually have — conditions, allergies, a pregnancy, a child who cannot guess.</p>
+        <p>If you have histamine intolerance, you already know the allergen box never mentioned you. If you shop for two different people in the same trip, you already know a single “healthy” rating is useless.</p>
+        <p>This is the missing sentence. Then you put it in the basket, or you don’t.</p>
+      </div>
+    </section>
+
+    <section class="panel" id="built">
+      <header class="panel-head">
+        <p class="kicker">On the pack, so to speak</p>
+        <h2>Built the way you’d want it after work, in the shop.</h2>
+        <p>Not ten features competing for a screenshot. A few things that have to be true or the app is theatre.</p>
+      </header>
+
+      <dl class="spec">
+        <div>
+          <dt>The scanner</dt>
+          <dd>Open the camera. Point it at the list. If the pot is curved, the print is tired, or the label is wrecked — type it. Same analysis. The aisle is not a studio.</dd>
+        </div>
+        <div>
+          <dt>One sentence, then a reason</dt>
+          <dd>Skip this — it has milk. Because of his dairy allergy. No score, no percentage, no wall of text while someone queues behind you. Pull up only if you want the full list.</dd>
+        </div>
+        <div>
+          <dt>A household, not a user</dt>
+          <dd>Separate profiles under one account. Yourself, a child, a partner, a parent. Switch from the scanner with one tap. Every scan belongs to whoever was active — so you don’t “save” a yoghurt as safe and later feed it to the wrong person.</dd>
+        </div>
+        <div>
+          <dt>Histamine, named</dt>
+          <dd>Not buried in a generic condition chip. Direct sources, liberators, DAO blockers, and the processing that never makes the ingredients line — aged, cured, smoked, pickled. You set how loud it gets. The allergen box never did this for you. A barcode database can’t.</dd>
+        </div>
+        <div>
+          <dt>Pregnant, on purpose</dt>
+          <dd>A life-stage toggle, not a condition to apologise for. It watches for the usual label-visible cautions — alcohol, caffeine, unpasteurised dairy — and speaks like a friend. It will not diagnose, and it will not pretend a label knows how you cook fish.</dd>
+        </div>
+        <div>
+          <dt>It gets more useful, not less</dt>
+          <dd>Every scan is kept. Add an allergy in November and re-check what you bought in March. Safe and avoid lists are per person, for the next time you’re in a hurry. An optional weekly note: what you scanned, what was flagged, one ingredient that actually matters to you. Not a marketing ping.</dd>
+        </div>
+      </dl>
+    </section>
+
+    <section class="honest">
+      <div class="honest-copy">
+        <p class="kicker">Read this part</p>
+        <h2>We are not here to grade your groceries.</h2>
+        <p>Kyttos will not tell you that a yoghurt is “73% healthy.” It will not look up a barcode and hope the manufacturer’s database is having a good day. It will not count your calories, ping you about recalls, or turn shopping into a feed.</p>
+        <p>It reads what’s printed. It places that against the people you shop for. When the label cannot tell the whole story, it should say so — not invent a confident answer because confident answers convert.</p>
+        <p>If that sounds smaller than the usual app pitch: good. The aisle is already loud enough.</p>
+      </div>
+      <ul class="not-list">
+        <li>Not a medical diagnosis</li>
+        <li>Not a product database</li>
+        <li>Not a nutrition tracker</li>
+        <li>Not a social network</li>
+      </ul>
+    </section>
+
+    <section class="homecoming">
+      <figure>
+        <img src="./assets/og-cover.png" alt="A kitchen table in daylight: a receipt, an open yoghurt, a phone face down.">
+        <figcaption>After the shop: the useful part is that the scan is still there when the household changes.</figcaption>
+      </figure>
+    </section>
+
+    <section class="download" id="download">
+      <div class="download-copy">
+        <p class="kicker">Take it with you</p>
+        <h2>If you shop for a real household, this was overdue.</h2>
+        <p>Kyttos is on the iPhone, for anyone who shops for a real household. Send a scan to the family chat if that’s how you actually decide.</p>
+        <a class="btn btn-solid btn-lg" href="https://apps.apple.com/" rel="noopener noreferrer" target="_blank">
+          <img src="./assets/ic_apple.svg" alt="" width="18" height="18">
+          Download on the App Store
+        </a>
+        <p class="fine">iPhone.</p>
+      </div>
+      <figure class="share-figure">
+        <img src="./assets/share-card.png" alt="A quiet share card: Skip this — it has milk. Because of Leo's dairy allergy.">
+        <figcaption>What you send to the group. Not a dashboard screenshot.</figcaption>
+      </figure>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <p class="brand-foot">Kyttos</p>
+      <p>Know what’s inside. Shop with confidence — for the people who actually eat it.</p>
+    </div>
+    <p class="legal">Kyttos is informational. It does not diagnose, prescribe, or replace medical or prenatal care. Results are based on what’s printed on the pack and the profile you had open.</p>
+    <p class="copy">© <span id="year">2026</span> Kyttos. A one-pager, on purpose.</p>
+  </footer>
+
+  <script src="./js/main.js"></script>
+</body>
+</html>
