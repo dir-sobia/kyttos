@@ -1,0 +1,22 @@
+Replace these PNGs in place. Keep the filenames. Recommended sizes are a starting point, not a crop rule.
+
+app-icon.png       1024×1024   App mark. Used in the header and as apple-touch-icon.
+favicon.png        512×512     Browser tab. Can be a smaller crop of the icon.
+label-yogurt.png   1600×2100   Close-up of a real ingredient list. This is the camera view inside the phone.
+aisle-dairy.png    2400×1600   Dairy aisle, no people if you can help it. Full-bleed “the moment” band.
+                   Replace before a public launch — the current file is a generated lookalike and may show real brands.
+hand-label.png     2000×1500   First-person hand holding a pack in a shop. Split section.
+                   Same note: generated placeholder, swap for your own photo.
+og-cover.png       2400×1260   Kitchen / after-the-shop still. Also used for social previews.
+share-card.png     1600×1200   Quiet share image: verdict + reason + small Kyttos wordmark.
+
+When you have real app screenshots, drop them here too if you want to swap the CSS phone for a photo:
+
+screenshot-result.png    1290×2796   Scan result sheet over a label photo
+screenshot-profiles.png  1290×2796   Profile switch on the scanner
+screenshot-history.png   1290×2796   History / re-run against current profile
+
+The phone on the page is HTML/CSS on purpose, so it can type the verdict and switch profiles. You do not have to replace it. If you do, edit the .device block in index.html.
+
+App Store button: in index.html search for https://apps.apple.com/ and paste your live listing URL. Also set a full https URL on the og:image meta tag once the GitHub Pages domain is known.
+
